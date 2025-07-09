@@ -10,11 +10,44 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>NLW Agents</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-</body>
+    <header>
+        <img src="./assets/logo.png" alt="Logo sports NLW">
+    </header>
 
+    <main>
+        <section>
+            <div>
+                <h2 class="title">Assistente de Meta</h2>
+                <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+
+                <form id="form">
+                    <input id="api-key" type="password" placeholder="Informe a API KEY do Gemini" required>
+
+                    <select id="game-select">
+                        <option value="">Selecione um jogo</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="genshin">Genshin impact</option>
+                    </select>
+
+                    <input id="question-input" type="text" placeholder="Ex: Melhor build para ADC..." required>
+                    <button id="ask-button">Perguntar</button>
+                </form>
+
+                <div id="ai-response" class="hidden">
+                    <div class="response-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
 </html>
